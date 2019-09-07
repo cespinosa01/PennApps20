@@ -15,14 +15,18 @@
 <body>
   <h1> Zero Waste </h1>
   <h2> Eliminate Food Waste <br> AI generated recipes </h2>
-  {% for label in labels %}
-  <img src="https://www.flaticon.com/free-icon/bin_2056181" alt="Icon made by fjstudio from flaticon.com" width="500" height="600">
-<!--  <p>{{ label['Name'] }}</p>
+ <img src="https://image.flaticon.com/icons/svg/2056/2056181.svg"
+ alt="Icon made by fjstudio from flaticon.com">
+  <div class="container">
+<button type="button" onclick="alert('Find Recipes')">Upload a picture of my food</button>
+<button type="button" onclick="alert('Find Recipes')">Upload a picture of my receipt</button>
+</div>
+<!--
+ {% for label in labels %}
+<p>{{ label['Name'] }}</p>
   {% endfor %}
   https://www.flaticon.com/download-icon
 -->
-
-  <button type="button" onclick="alert('Find Recipes')">Find Recipes</button>
 
 </body>
 

@@ -3,16 +3,40 @@ body {
 }
 
 h1 {
-  color: #1C1919;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
-  font-size: 80px;
+  font-size: 60px;
 }
 
 h2 {
   text-align: right;
-  font-size: 50px;
-}
-p {
+  font-size: 25px;
+  padding-right: 350px;
   font-family: 'Raleway', sans-serif;
-  font-size: 10px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+.container {
+  position: relative;
+}
+
+img {
+  display: block;
+  width:  55px;
+  height: 55px;
+  position: relative;
+  left: 0px;
+  top: -190px;
+  z-index: -1;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.5;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
