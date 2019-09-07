@@ -11,35 +11,50 @@
   <script src="js/uikit-icons.min.js"></script>
   <script src="ui.js"></script>
   <script src="uikit/dist/js/uikit-icons.min.js"></script>
+  <script src="https://threejs.org/build/three.js"></script>
 </head>
 
 <body>
   <div class="nav">
   <a href="index3.html" class="about">about</a>
-  <a href="#" class="faq">faq</a>
-  <a href="#" class="reduce 101">reduce 101</a>
-  <a href= "#" class = "home">home</a>
+  <a href="index4.html" class="faq">faq</a>
+ <!--  <a href="#" class="reduce 101">reduce 101</a> -->
+  <a href= "index2.html" class = "home">home</a>
 </div>
 
   <h2> About </h2>
   <h3> Zero Waste: UI/UX Case Study </h3>
   <h4> Created during PennApps 2019 by Cindy Espinosa and Malini Kundamal <br>
      under route for social good.</h4>
-  <img src="https://image.flaticon.com/icons/svg/2056/2056181.svg"
+  <img src="https://image.flaticon.com/icons/svg/2056/2056181.svg" class = "image1"
   alt="Icon made by fjstudio from flaticon.com">
 
-  <p>Problem: Food goes to waste in fridges daily. </p>
+  <h3>Problem: Food goes to waste in fridges daily. How much? About 1 pound <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0195405">per day.</a></h3>
+  <a title="Gail Frederick [CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)],
+  via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Bananas._Costa_Rica.jpg">
+    <img width="50px" alt="Bananas. Costa Rica"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bananas._Costa_Rica.jpg/512px-Bananas._Costa_Rica.jpg"
+    class = "image2"></a>
+  <a title="The Photographer [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)],
+   via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cavendish_banana_from_Maracaibo.jpg">
+   <img width="512" alt="Cavendish banana from Maracaibo"
+   src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Cavendish_banana_from_Maracaibo.jpg/512px-Cavendish_banana_from_Maracaibo.jpg"
+ class = "image3"></a>
+ <img src = "https://images.unsplash.com/photo-1531171630952-6a86c2276cf7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1017&q=80"
+ class = "image4" ></a>
+
   <p> Solution: An AI generated recipe tool that will maximize <br>
     how a person uses their food items in order to reduce waste. <br> There are more possibilities
   with this solution, because future iterations could <br> predict
   food spoiling based on expiration dates, climate, and geographic location.
 </p>
-  <p> Tools used for backend: python, amazon web services, machine learning, github<br>
+  <p> Tools used for backend: python, amazon web services, machine learning, github <br>
     Tools used for frontend: Adobe Xd, UIkit, HTML5, CSS, github </p>
     <p> Competitive Research: We found that in the United States, about 4.2 trillion gallons of water <br>
-      are wasted by not consuming @5% of food according to PLOS One as reported by LA Times. </p>
+      are wasted by not consuming 25% of food according to <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0195405">PLOS One</a> as reported by <a href="https://www.latimes.com/science/sciencenow/la-sci-sn-food-waste-water-20180419-story.html">LA Times</a> LA Times.
+    <br> Current target users are individuals, but this product could be scaled to larger communities like schools. </p>
   <style>
-  img{
+  .image1{
       display: block;
       width:  20px;
       height: 20px;
@@ -53,10 +68,55 @@
       transition: .5s ease;
       backface-visibility: hidden;
   }
+  .image2{
+    display: block;
+    width:  100px;
+    height: 100px;
+    position: relative;
+    top: -10px;
+    margin-left: 20px;
+    margin-right: auto;
+    opacity: 1;
 
+  }
+  .image3{
+    display: block;
+    width:  100px;
+    height: 100px;
+    position: relative;
+    top: -110px;
+    margin-left: 120px;
+    opacity: 1;
+  }
+  .image4{
+    display: block;
+    width:  100px;
+    height: 100px;
+    position: relative;
+    top: -210px;
+    margin-left: 220px;
+    opacity: 1;
+
+  }
   h2{
     text-align: center;
     padding-left: 350px;
+  }
+  p{
+    position: relative;
+    top: -170px;
+    left: 50px;
+    font-family:'Raleway', sans-serif;
+  }
+
+  h3{
+    padding-top: -20px;
+    left: 50px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  h4{
+    font-family: 'Raleway', sans-serif;
   }
   </style>
 
