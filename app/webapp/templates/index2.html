@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome page</title>
+  <style>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+}
+</style>
+</head>
+<body>
+{% for label in labels %}
+  <p>{{ label['Name'] }}</p>
+{% endfor %}
+</body>
+</html>
