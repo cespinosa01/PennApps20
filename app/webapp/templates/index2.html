@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Welcome page</title>
-  <style>
-body {
-  background-color: lightblue;
-}
-
-h1 {
-  color: white;
-  text-align: center;
-}
-
-p {
-  font-family: 'Raleway', sans-serif;
-  font-size: 10px;
-}
-</style>
+  <title>Welcome page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
+  <script src="ui.js"></script>
+  <script src="uikit/dist/js/uikit-icons.min.js"></script>
 </head>
+
 <body>
+	<h1> Zero Waste </h1>
+	<h2> Eliminate Food Waste <br> AI generated recipes </h2>
+	<img src="https://www.flaticon.com/free-icon/bin_2056181" alt="Icon made by fjstudio from flaticon.com" width="500" height="600">
+	<button type="button" onclick="alert('Find Recipes')">Find Recipes</button>
 	<p>Items in your refridgerator:</p>
 {% for label,j in d.items() %}
   <p>{{label}}</p>
@@ -29,4 +27,5 @@ p {
 {% endfor %}
 
 </body>
+
 </html>
