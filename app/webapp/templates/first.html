@@ -1,8 +1,12 @@
 <html>
    <div class="first">
-     <h1>Receipt</h1>
-     {% for text in textDetections %}
-       <p>{{text['DetectedText']}}</p>
-     {% endfor %}
+     <h1> Zero Waste </h1>
+ 	<h2> Eliminate Food Waste <br> AI generated recipes </h2>
+
+ 	<form action="/first" method = "post" enctype="multipart/form-data">
+   <input type="file" name="picture" id="picture">
+   <input type="submit">
+   <a href="/">Back</a>
+ 	</form>
    </div>
 </html>
