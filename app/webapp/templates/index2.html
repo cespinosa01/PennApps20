@@ -29,6 +29,11 @@
  <button type="button" onclick="alert('Find Recipes')">Upload a picture of my food</button>
  <button type="button" onclick="alert('Find Recipes')">Upload a picture of my receipt</button>
 
+ <form action="/" method = "post" enctype="multipart/form-data">
+  <input type="file" name="picture" id="picture">
+  <input type="submit">
+  </form>
+
  <!--	<p>Items in your refridgerator:</p>
 {% for label,j in d.items() %}
   <p>{{label}}</p>
