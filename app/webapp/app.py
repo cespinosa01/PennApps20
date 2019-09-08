@@ -38,16 +38,16 @@ def index():
         d[label]=list(recipes)
         label = response['Labels'][0]['Name']
         print(label)
-        #if(label == "Food"):
-            #banana_function("knn","3scenes","3scenes/ripe_new/ripe_01.jpg")
-        #elif(label == "Apple"):
-            #potato_function("knn","3scenes","3scenes/ripe_new/ripe_01.jpeg")
-        #elif(label == "Fruit"):
-            #apple_function("knn","3scenes", "3scenes/ripe_new/ripe_01.jpeg")
-        #elif(label == "Plant"):
-            #bread_function("knn","3scenes", "3scenes/bread/bread_01.jpg")
-        #else:
-            #print("Food")
+        if(label == "Food"):
+            banana_function("knn","3scenes","3scenes/ripe_new/ripe_01.jpg")
+        elif(label == "Apple"):
+            potato_function("knn","3scenes","3scenes/ripe_new/ripe_01.jpeg")
+        elif(label == "Fruit"):
+            apple_function("knn","3scenes", "3scenes/ripe_new/ripe_01.jpeg")
+        elif(label == "Plant"):
+            bread_function("knn","3scenes", "3scenes/bread/bread_01.jpg")
+        else:
+            print("Food")
         return render_template('index9.html', labels=response['Labels'], d=d)
     else:
         return render_template('index7.html')

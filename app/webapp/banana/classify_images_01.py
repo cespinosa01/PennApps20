@@ -48,7 +48,7 @@ def banana_function(model, dataset, picture):
 	# grab all image paths in the input dataset directory, initialize our
 	# list of extracted features and corresponding labels
 	print("[INFO] extracting image features...")
-	imagePaths = paths.list_images(dataset)
+	imagePaths = paths.list_images("banana/"+dataset)
 	data = []
 	labels = []
 
@@ -84,6 +84,6 @@ def banana_function(model, dataset, picture):
 	predictions = model.predict(testX)
 	print(classification_report(testY, predictions,
 		target_names=le.classes_))
-	result = model.predict(picture, batch_size=1)
+	result = model.predict_picture(picture,batch_size=10)
 	print(result)
 	return 1

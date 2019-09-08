@@ -48,7 +48,7 @@ def potato_function(model, dataset,picture):
 	# grab all image paths in the input dataset directory, initialize our
 	# list of extracted features and corresponding labels
 	print("[INFO] extracting image features...")
-	imagePaths = paths.list_images(dataset)
+	imagePaths = paths.list_images("potatoes/"+dataset)
 	data = []
 	labels = []
 
@@ -86,6 +86,6 @@ def potato_function(model, dataset,picture):
 	#cv2.read()
 	print(classification_report(testY, predictions,
 		target_names=le.classes_))
-	result = model.predict(picture, batch_size=1)
+	result = model.predict(picture)
 	print(result)
 	return 1
