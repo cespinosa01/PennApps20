@@ -35,10 +35,10 @@ def index():
         label = response['Labels'][0]['Name']
         print(label)
         #if(label) == "banana":
-        return render_template('index2.html', labels=response['Labels'], d=d)
+        return render_template('index9.html', labels=response['Labels'], d=d)
     #classify_images()
     else:
-        return render_template('index5.html')
+        return render_template('index7.html')
 
 if __name__ == '__main__':
      app.run()
