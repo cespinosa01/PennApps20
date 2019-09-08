@@ -38,7 +38,7 @@ def index():
         return render_template('index2.html', labels=response['Labels'], d=d)
     #classify_images()
     else:
-        return render_template('index3.html')
+        return render_template('index5.html')
 
 if __name__ == '__main__':
      app.run()
