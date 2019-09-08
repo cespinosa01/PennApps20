@@ -90,6 +90,8 @@ model.fit(trainX, trainY)
 # make predictions on our data and show a classification report
 print("[INFO] evaluating...")
 predictions = model.predict(testX)
+
+cv2.read()
 print(classification_report(testY, predictions,
 	target_names=le.classes_))
 print(label)

@@ -92,4 +92,7 @@ print("[INFO] evaluating...")
 predictions = model.predict(testX)
 print(classification_report(testY, predictions,
 	target_names=le.classes_))
-print(target_names=le.classes_))
+image2 = Image.open(apple_01.jpeg)
+
+print(classification_report(apple_01.jpeg, predictions,
+	target_names=le.classes_))
