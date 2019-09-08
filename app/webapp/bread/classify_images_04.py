@@ -21,7 +21,7 @@ import numpy as np
 import argparse
 import os
 
-def bread_function(model, dataset):
+def bread_function(model, dataset,picture):
 	def extract_color_stats(image):
 		# split the input image into its respective RGB color channels
 		# and then create a feature vector with 6 values: the mean and
@@ -49,7 +49,7 @@ def bread_function(model, dataset):
 	# grab all image paths in the input dataset directory, initialize our
 	# list of extracted features and corresponding labels
 	print("[INFO] extracting image features...")
-	imagePaths = paths.list_images(dataset)
+	imagePaths = paths.list_images("bread/"+dataset)
 	data = []
 	labels = []
 
@@ -85,6 +85,6 @@ def bread_function(model, dataset):
 	predictions = model.predict(testX)
 	print(classification_report(testY, predictions,
 		target_names=le.classes_))
-	result = model.predict(picture, batch_size=1)
+	result = model.predict(picture)
 	print(result)
 	return 1

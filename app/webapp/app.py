@@ -3,10 +3,10 @@
 import boto3
 from flask import Flask, render_template, request
 from googlesearch import search
-from banana import classify_images_01
-from potatoes import classify_images_02
-from apple import classify_images_03
-from bread import classify_images_04
+from banana.classify_images_01 import banana_function
+from potatoes.classify_images_02 import potato_function
+from apple.classify_images_03 import apple_function
+from bread.classify_images_04 import bread_function
 
 UPLOAD_FOLDER = '/path/to/the/uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
@@ -39,13 +39,13 @@ def index():
         label = response['Labels'][0]['Name']
         print(label)
         #if(label == "Food"):
-            #classify_images_01(knn,"3scenes","3scenes/ripe_new/ripe_01.jpg")
-        #elif(label == "Food"):
-            #classify_images_02(knn,"3scenes","3scenes/ripe_new/ripe_01.jpeg")
+            #banana_function("knn","3scenes","3scenes/ripe_new/ripe_01.jpg")
+        #elif(label == "Apple"):
+            #potato_function("knn","3scenes","3scenes/ripe_new/ripe_01.jpeg")
         #elif(label == "Fruit"):
-            #classify_images_03(knn,"3scenes", "3scenes/ripe_new/ripe_01.jpeg")
-        #elif(label == "Food"):
-            #classify_images_04(knn,"3scenes", "3scenes/bread/bread_01.jpg")
+            #apple_function("knn","3scenes", "3scenes/ripe_new/ripe_01.jpeg")
+        #elif(label == "Plant"):
+            #bread_function("knn","3scenes", "3scenes/bread/bread_01.jpg")
         #else:
             #print("Food")
         return render_template('index9.html', labels=response['Labels'], d=d)
