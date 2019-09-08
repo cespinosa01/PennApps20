@@ -1,0 +1,8 @@
+<html>
+   <div class="first">
+     <h1>Receipt</h1>
+     {% for text in textDetections %}
+       <p>{{text['DetectedText']}}</p>
+     {% endfor %}
+   </div>
+</html>
