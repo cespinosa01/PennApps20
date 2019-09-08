@@ -1,9 +1,7 @@
-
 # USAGE
 # python classify_images.py
-# python classify_images.py --model random_forest
+# python classify_images.py --model svm
 
-# This file uses machine learning models like ....,
 # import the necessary packages
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
@@ -32,6 +30,14 @@ def extract_color_stats(image):
 	# return our set of features
 	return features
 
+# construct the argument parser and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument("-d", "--dataset", type=str, default="3scenes",
+	help="path to directory containing the '3scenes' dataset")
+ap.add_argument("-m", "--model", type=str, default="knn",
+	help="type of python machine learning model to use")
+args = vars(ap.parse_args())
+
 # define the dictionary of models our script can use, where the key
 # to the dictionary is the name of the model (supplied via command
 # line argument) and the value is the model itself
@@ -41,14 +47,14 @@ models = {
 	"logit": LogisticRegression(solver="lbfgs", multi_class="auto"),
 	"svm": SVC(kernel="linear"),
 	"decision_tree": DecisionTreeClassifier(),
-	"random_forest": RandomForestClassifier(n_estimators=5),
+	"random_forest": RandomForestClassifier(n_estimators=100),
 	"mlp": MLPClassifier()
 }
 
 # grab all image paths in the input dataset directory, initialize our
 # list of extracted features and corresponding labels
 print("[INFO] extracting image features...")
-imagePaths = paths.list_images("apple/"+dataset)
+imagePaths = paths.list_images(args["dataset"])
 data = []
 labels = []
 
@@ -59,6 +65,7 @@ for imagePath in imagePaths:
 	image = Image.open(imagePath)
 	features = extract_color_stats(image)
 	data.append(features)
+
 	# extract the class label from the file path and update the
 	# labels list
 	label = imagePath.split(os.path.sep)[-2]
@@ -74,8 +81,8 @@ labels = le.fit_transform(labels)
 	test_size=0.25)
 
 # train the model
-print("[INFO] using '{}' model".format(model))
-model = models[model]
+print("[INFO] using '{}' model".format(args["model"]))
+model = models[args["model"]]
 model.fit(trainX, trainY)
 
 # make predictions on our data and show a classification report
@@ -83,5 +90,3 @@ print("[INFO] evaluating...")
 predictions = model.predict(testX)
 print(classification_report(testY, predictions,
 	target_names=le.classes_))
-#result = model.predict(picture)
-#print(result)

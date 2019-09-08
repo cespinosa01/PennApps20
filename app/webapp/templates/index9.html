@@ -15,17 +15,28 @@
 </head>
 
 <body>
-<p>This item is added to your refrigerator:</p>
+<h1>This item is added to your refrigerator:</h1>
 {% for label,j in d.items() %}
-  <p>{{label}}</p>
+  <h3>{{label}}</h3>
 	{% for element in j %}
-	<p> Recipes: </p>
-			<p> {{element}} </p>
+	<h1> Recipes: </h1>
+			<h3> {{element}} </h3>
 	{% endfor %}
 {% endfor %}
 <style>
-  p{
+  h3{
     font-family: 'Raleway', sans-serif;
+    size: 25px;
+    text-align: center;
+
+  }
+
+  h1{
+    color:#e67c82;
+  }
+
+  h2{
+    text-align: center;
   }
 </style>
 

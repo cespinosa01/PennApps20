@@ -79,11 +79,13 @@ input[type=text]{
 }
 input[type=submit] {
   width: 100%;
+  font-size: 500px;
   background-color: #e67c82;
   color: white;
   padding: 14px 20px;
   margin: 8px 4px;
   border: none;
+  border-color: red; 
   border-radius: 4px;
   cursor: pointer;
 }
