@@ -38,16 +38,16 @@ def index():
         d[label]=list(recipes)
         label = response['Labels'][0]['Name']
         print(label)
-        if(label == "Food"):
-            classify_images_01(knn,"3scenes","3scenes/ripe_new/ripe_01.jpg")
-        elif(label == "Food"):
-            classify_images_02(knn,"3scenes","3scenes/ripe_new/ripe_01.jpeg")
-        elif(label == "Fruit"):
-            classify_images_03(knn,"3scenes", "3scenes/ripe_new/ripe_01.jpeg")
-        elif(label == "Food"):
-            classify_images_04(knn,"3scenes", "3scenes/bread/bread_01.jpg")
-        else:
-            print("Food")
+        #if(label == "Food"):
+            #classify_images_01(knn,"3scenes","3scenes/ripe_new/ripe_01.jpg")
+        #elif(label == "Food"):
+            #classify_images_02(knn,"3scenes","3scenes/ripe_new/ripe_01.jpeg")
+        #elif(label == "Fruit"):
+            #classify_images_03(knn,"3scenes", "3scenes/ripe_new/ripe_01.jpeg")
+        #elif(label == "Food"):
+            #classify_images_04(knn,"3scenes", "3scenes/bread/bread_01.jpg")
+        #else:
+            #print("Food")
         return render_template('index9.html', labels=response['Labels'], d=d)
     else:
         return render_template('index7.html')
