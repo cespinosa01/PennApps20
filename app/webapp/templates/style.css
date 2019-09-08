@@ -66,9 +66,24 @@ img {
   transition: .5s ease;
   backface-visibility: hidden;
 }
-input{
+input[type=text]{
   position: relative;
-  left: 100px;
-  top: -50px;
-  border-radius: 8px;
+  left: 460px;
+  top: -25px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid red;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #e67c82;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
