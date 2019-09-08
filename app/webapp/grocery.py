@@ -16,7 +16,7 @@ def generate_list_recipies(recipes):
         x=next(recipes)
         l.append(x)
     return l
-@app.route('/first', methods=['GET', 'POST'])
+@app.route('/first/', methods=['GET', 'POST'])
 def first():
     if request.method == "POST":
         print(request.form)
